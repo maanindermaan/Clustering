@@ -1,71 +1,64 @@
-# Clustering Assignment using Pycaret
-This repository contains the implementation of different clustering algorithms on the sales-transaction dataset using PyCaret. The goal is to explore the performance of clustering techniques with various pre-processing methods and evaluate them on different metrics.
+Here's a revised version of your README file, keeping the links and images intact, removing any redundancy, and expanding on some sections to provide a more comprehensive overview:
 
-## Dataset
-This dataset has been picked from 
-[UCI Library](https://archive.ics.uci.edu/dataset/396/sales+transactions+dataset+weekly).
-This dataset contains weekly purchased quantities of over 800 products over 52 weeks. Normalised values were removed manually.
+---
 
+# Clustering Assignment using PyCaret
 
-## Clustering Techniques
-1. KMeans
-2. Agglomerative
-3. Birch
+This repository explores the application of various clustering algorithms to a sales-transaction dataset using PyCaret. The objective is to assess the efficacy of these techniques across different preprocessing methods and evaluation metrics.
 
-## Evaluation Parameters
-The clustering techniques are evaluated based on the following parameters:
+## Dataset Overview
 
-1. Silhouette Score
-2. Calinski-Harabasz Index
-3. Davies-Bouldin Index
+The data, sourced from the [UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/396/sales+transactions+dataset+weekly), consists of weekly purchase quantities for over 800 products spanning 52 weeks. To improve the clarity and accuracy of analysis, normalized values have been manually omitted.
 
-## Pre-Processing techniques used are:
+## Clustering Techniques Employed
 
-1. Normalization
-2. Transformation
-3. PCA (Principal Component Analysis)
-4. Normalization + Transformation
-5. Normalization + Transformation + PCA
+We implement and evaluate the following clustering algorithms:
+- **KMeans**: Popular for its simplicity and efficiency in clustering large datasets.
+- **Agglomerative Clustering**: A hierarchical clustering method using a bottom-up approach.
+- **Birch**: Designed for very large datasets, utilizing a tree structure for clustering.
 
-## Graphs
-1. Distribution
-   - KMeans
- 
-     ![KMeans](images/Distribution/KMeans.png)
-    
-   - Agglomerative
- 
-     ![Agglomerative](images/Distribution/Agglomerative.png)
-    
-   - Birch
- 
-     ![Birch](images/Distribution/Birch.png)
-    
-2. Silhouette
-   - KMeans
- 
-     ![KMeans](images/Silhouette/KMeans.png)
-    
-   - Birch
+## Evaluation Metrics
 
-     ![Birch](images/Silhouette/Birch.png)
+The performance of the clustering algorithms is measured using:
+- **Silhouette Score**: Measures the consistency within clusters.
+- **Calinski-Harabasz Index**: Evaluates clusters based on their density and separation.
+- **Davies-Bouldin Index**: The lower the index, the better the separation between clusters.
 
-3. TSNE
-   - KMeans
- 
-     ![KMeans](images/TSNE/KMeans.png)
-    
-   - Agglomerative
- 
-     ![Agglomerative](images/TSNE/Agglomerative.png)
-    
-   - Birch
- 
-     ![Birch](images/TSNE/Birch.png)
+## Pre-Processing Techniques
 
-## Result Tables
+To prepare the data for clustering, we applied the following methods:
+- **Normalization**: Scales the data to a uniform range.
+- **Transformation**: Converts data to approximate normality.
+- **PCA (Principal Component Analysis)**: Reduces dimensionality while retaining most variance.
+- **Combined Techniques**: We experimented with combinations like Normalization + Transformation and Normalization + Transformation + PCA to investigate their impact on clustering performance.
 
-  ![Results](images/FinalResult.png)
+## Graphs and Visualizations
 
-## Best Algorithm
-The best algorithm to cluster sales-transaction dataset is ***KMeans Clustering*** method as it has the highest Silhouette score without pre-processing techniques.
+We provide a series of graphs to visually assess the effectiveness of each clustering method:
+1. **Distribution Plots**: Visualizing cluster distribution can help identify the cohesiveness of data points within each cluster.
+   - **KMeans**: ![KMeans Distribution](images/Distribution/KMeans.png)
+   - **Agglomerative**: ![Agglomerative Distribution](images/Distribution/Agglomerative.png)
+   - **Birch**: ![Birch Distribution](images/Distribution/Birch.png)
+
+2. **Silhouette Scores**: These graphs highlight the silhouette score for each clustering method, indicative of how similar an object is to its own cluster compared to other clusters.
+   - **KMeans**: ![KMeans Silhouette](images/Silhouette/KMeans.png)
+   - **Birch**: ![Birch Silhouette](images/Silhouette/Birch.png)
+
+3. **TSNE Plots**: t-SNE reduces dimensionality for visualization of the dataset and provides insights into the data clustering structure.
+   - **KMeans**: ![KMeans TSNE](images/TSNE/KMeans.png)
+   - **Agglomerative**: ![Agglomerative TSNE](images/TSNE/Agglomerative.png)
+   - **Birch**: ![Birch TSNE](images/TSNE/Birch.png)
+
+## Results Summary
+
+The results of our clustering experiments are compiled in a detailed table, showcasing the performance across all applied techniques.
+
+![Results Table](images/FinalResult.png)
+
+## Conclusion
+
+Based on our evaluations, **KMeans Clustering** stands out as the most effective algorithm for this dataset, especially notable for achieving the highest Silhouette score without the need for preprocessing enhancements.
+
+---
+
+This version of the README provides a clearer, more informative narrative about your project, highlighting each section's key points while maintaining all original image links. If there are any specific areas you'd like to expand further, please let me know!
